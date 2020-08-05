@@ -1,0 +1,22 @@
+{
+    "name": "soswapp/theme.soswapp",
+    "description": "7 OS Web - Theming app",
+    "keywords": ["css", "javascript","7","seven","os","web","theme"],
+    "homepage": "https://github.com/soswapp/theme.soswapp",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ikechukwu Okalia",
+            "email": "dev@ikechukwuokalia.com"
+        },
+        {
+            "name": "Tym Frontiers Ltd.",
+            "email": "dev@tymfrontiers.com"
+        }
+    ],
+    "require": {
+      "soswapp/js-generic.soswapp" : ">=0.1@stable"
+    },
+    "require-dev": {}
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACF,gBAAgB,EAAE,OAAqB;EACvC,KAAK,EAAE,OAAqB",
+"sources": ["../sass/theme-light.soswapp.scss"],
+"names": [],
+"file": "web-theme-light.css"
+}

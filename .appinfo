@@ -1,0 +1,26 @@
+{
+  "nav" : false,
+  "icon" : "",
+  "name" : "soswapp/theme.soswapp",
+  "title" : "Theme Plugin",
+  "description" : "7 OS UI/UX theme.",
+  "homepage" : "https://github.com/soswapp/theme.soswapp",
+  "authors": [
+      {
+        "name": "Ikechukwu Okalia",
+        "email": "dev@ikechukwuokalia.com"
+      },
+      {
+        "name": "Tym Frontiers Ltd.",
+        "email": "dev@tymfrontiers.com"
+      }
+  ],
+  "support" : {
+    "email" : "dev@tymfrontiers.com",
+    "website" : "https://dev.tymfrontiers.com",
+    "kollabo" : "tymfrontiers",
+    "twitter" : "tymfrontiers",
+    "facebook" : "tymfrontiers",
+    "instagram" : "tymfrontiers"
+  }
+}

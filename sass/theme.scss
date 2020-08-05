@@ -1,0 +1,1227 @@
+/*! 7OS -Web theme: https://github.com/soswapp/theme.soswapp */
+
+@import "var";
+@import "reset";
+@import "grids";
+@import "colors";
+@import "fn";
+@import "font-face";
+
+
+.btn, .sos-btn, .button, .sos-button{
+  font-family: $base-font;
+  position: relative;
+  display: block;
+  float: left;
+  margin: 5px;
+  padding: 15px 20px 15px 20px;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  @include border-radius(2px);
+  color: #202129;
+  background-color: #edeeee;
+  @include drop-shadow(#000);
+  @include animate-all;
+  &.inline{
+    float: none;
+    display: inline-block;
+  }
+  &.flat{
+    @include border-radius(0px);
+  }
+  &:focus, &:active, &:visited{
+    border: none; outline: none !important;
+  }
+  &:hover{
+    transition: all 95ms ease;
+    opacity: .9;
+    background-color: #e1e2e2;
+  }
+  &:active{
+    transition: all 95ms ease;
+    opacity: .75;
+  }
+  &:focus{
+    outline: 1px dotted #959595;
+    outline-offset: -4px;
+  }
+  &.dark{
+    background-color: $gray;
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($gray,3%);
+    }
+  }
+  &.black {
+    background-color: lighten(#000,25%);
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: #000;
+    }
+  }
+  &.white {
+    background-color: lighten($silver,12%);
+    color: #000;
+    &:visited{ color: #000 !important; }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &.asphalt {
+    background-color: $asphalt;
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($asphalt,3%);
+    }
+  }
+  &.facebook {
+    background-color: $facebook;
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($facebook,3%);
+    }
+  }
+  &.twitter {
+    background-color: $twitter;
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($twitter,3%);
+    }
+  }
+  &.googleplus {
+    background-color: $googleplus;
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($googleplus,3%);
+    }
+  }
+  &.vimeo {
+    background-color: $vimeo;
+    color: #fff;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($vimeo,3%);
+    }
+  }
+  &.red{
+    color: #fff;
+    background-color: $red;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($red,3%);
+    }
+  }
+  &.blue{
+    color: #fff;
+    background-color: $blue;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($blue,3%);
+    }
+  }
+  &.green{
+    color: #fff;
+    background-color: $green;
+    &:visited{ color: #fff !important; }
+    &:hover {
+      background-color: darken($green,3%);
+    }
+  }
+  &.yellow{
+    color: #000;
+    background-color: $amber;
+    &:visited{ color: #000 !important; }
+    &:hover {
+      background-color: darken($amber,3%);
+    }
+  }
+  &.gold{
+    color: #000;
+    background-color: $rose-gold;
+    &:visited{ color: #000 !important; }
+    &:hover {
+      background-color: darken($rose-gold,3%);
+    }
+  }
+  &.disabled{   cursor:not-allowed;  }
+  &.round-50{
+    width: 50px !important; height: 50px !important;
+    @include border-radius(100%);
+    padding: 10px; text-align: center;
+  }
+  &.round-30{
+    width: 35px !important; height: 35px !important;
+    @include border-radius(100%);
+    padding: 8px !important; text-align: center;
+  }
+  &.full-width{ width: 100% }
+}
+.btn.clear + *, .sos-btn.clear + * { clear: left; }
+.ripple {
+  position: absolute;
+  background: rgba(0,0,0,.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  pointer-events: none;
+}
+
+.ripple.show {
+  -webkit-animation: ripple .5s ease-out;
+  animation: ripple .5s ease-out;
+}
+
+@-webkit-keyframes
+ripple { to {
+   -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+   opacity: 0;
+  }
+}
+@keyframes
+ripple { to {
+   -webkit-transform: scale(1.5);
+   transform: scale(1.5);
+   opacity: 0;
+  }
+}
+.c-f, .clear-float{
+  height: 0; width: 0;
+  margin: 0; padding: 0;
+  clear: both;
+}
+.hidden:not(input){ display:none; visibility:hidden; }
+input.hidden{
+  height: 0; width: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.ff-open-sans{ font-family: "Open Sans" !important; }
+.ff-sans-serif{ font-family: sans-serif !important; }
+.ff-cursive{ font-family: cursive !important; }
+.ff-fantasy{ font-family: fantasy !important; }
+.ff-monospace{ font-family: monospace !important; }
+.ff-serif{ font-family: serif !important; }
+.ff-inherit{ font-family: inherit !important; }
+.alert, .sos.alert{
+  display: block;
+  position: relative;
+  display: block;
+  margin: 20px;
+  padding: 20px 20px 60px 20px;
+  @include drop-shadow($gray);
+  &.error{
+    background: lighten($red,8%);
+    color: #fff;
+  }
+  &.info{
+    background: lighten($amber,5%);
+    color: #000;
+  }
+  &.progress{
+    background: lighten($blue,5%);
+    color: #fff;
+  }
+  &.progress{ cursor: progress;}
+  &.success{
+    background: lighten($green,8%);
+    color: #fff;
+  }
+  &.message{
+    background: lighten(#edeeee,3%);
+    color: #000;
+  }
+  .btn, .sos-btn, .button, .sos-button{
+    position: absolute !important;
+    display: block !important;
+    float: none !important;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-box-shadow: none;
+  	-moz-box-shadow: none;
+  	box-shadow: none;
+  }
+}
+
+.color{
+  background-color:inherit;
+  &.color-face{
+    border-color: $color-face;
+    &.color-text, .color-text{ color: $color-face; }
+    &.color-bg, .color-bg{
+      border-color:darken($color-face, 10%);
+      background-color: $color-face;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $color-face;
+      &:color-bg, .color-bg{ border-color: darken($color-face,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($color-face,22%) !important;
+      &:focus, &.has-val{ border-color:$color-face !important; }
+    }
+  }
+  &.gold{
+    border-color: $gold;
+    &.color-text, .color-text{ color: $gold; }
+    &.color-bg, .color-bg{
+      border-color:darken($gold, 10%);
+      background-color: $gold;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $gold;
+      &:color-bg, .color-bg{ border-color: darken($gold,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($gold,22%) !important;
+      &:focus, &.has-val{ border-color:$gold !important; }
+    }
+  }
+  &.rose-gold{
+    border-color: $rose-gold;
+    &.color-text, .color-text{ color: $rose-gold; }
+    &.color-bg, .color-bg{
+      border-color:darken($rose-gold, 10%);
+      background-color: $gold;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $rose-gold;
+      &.color-bg, .color-bg{ border-color: darken($rose-gold,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($rose-gold,10%) !important;
+      &:focus, &.has-val{ border-color:$rose-gold !important; }
+    }
+  }
+  &.red{
+    border-color: $red;
+    &.color-text, .color-text{ color: $red; }
+    &.color-bg, .color-bg{
+      border-color:darken($red, 10%);
+      background-color: $red;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $red;
+      &.color-bg, .color-bg{ border-color: darken($red,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($red,22%) !important;
+      &:focus, &.has-val{ border-color:$red !important; }
+    }
+  }
+  &.blue{
+    border-color: $blue;
+    &.color-text, .color-text{ color: $blue; }
+    &.color-bg, .color-bg{
+      border-color:darken($blue, 10%);
+      background-color: $blue;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $blue;
+      &.color-bg, .color-bg{ border-color: darken($blue,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($blue,22%) !important;
+      &:focus, &.has-val{ border-color:$blue !important; }
+    }
+  }
+  &.light-blue{
+    border-color: $light-blue;
+    &.color-text, .color-text{ color: $light-blue; }
+    &.color-bg, .color-bg{
+      border-color:darken($light-blue, 10%);
+      background-color: $light-blue;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $light-blue;
+      &.color-bg, .color-bg{ border-color: darken($light-blue,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($light-blue,22%) !important;
+      &:focus, &.has-val{ border-color:$light-blue !important; }
+    }
+  }
+  &.midnight-blue{
+    border-color: $midnight-blue;
+    &.color-text, .color-text{ color: $midnight-blue; }
+    &.color-bg, .color-bg{
+      border-color:darken($midnight-blue, 10%);
+      background-color: $midnight-blue;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $midnight-blue;
+      &.color-bg, .color-bg{ border-color: darken($midnight-blue,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($midnight-blue,22%) !important;
+      &:focus, &.has-val{ border-color:$midnight-blue !important; }
+    }
+  }
+  &.green{
+    border-color: $green;
+    &.color-text, .color-text{ color: $green; }
+    &.color-bg, .color-bg{
+      border-color:darken($green, 10%);
+      background-color: $green;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $green;
+      &.color-bg, .color-bg{ border-color: darken($green,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($green,22%) !important;
+      &:focus, &.has-val{ border-color:$green !important; }
+    }
+  }
+  &.green-sea{
+    border-color: $green-sea;
+    &.color-text, .color-text{ color: $green-sea; }
+    &.color-bg, .color-bg{
+      border-color:darken($green-sea, 10%);
+      background-color: $green-sea;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $green-sea;
+      &.color-bg, .color-bg{ border-color: darken($green-sea,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($green-sea,22%) !important;
+      &:focus, &.has-val{ border-color:$green-sea !important; }
+    }
+  }
+  &.yellow{
+    border-color: $yellow;
+    &.color-text, .color-text{ color: $yellow; }
+    &.color-bg, .color-bg{
+      border-color:darken($yellow, 10%);
+      background-color: $yellow;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $yellow;
+      &.color-bg, .color-bg{ border-color: darken($yellow,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($yellow,22%) !important;
+      &:focus, &.has-val{ border-color:$yellow !important; }
+    }
+  }
+  &.asphalt{
+    border-color: $asphalt;
+    &.color-text, .color-text{ color: $asphalt; }
+    &.color-bg, .color-bg{
+      border-color:darken($asphalt, 10%);
+      background-color: $asphalt;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $asphalt;
+      &.color-bg, .color-bg{ border-color: darken($asphalt,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($asphalt,22%) !important;
+      &:focus, &.has-val{ border-color:$asphalt !important; }
+    }
+  }
+  &.cloud{
+    border-color: $cloud;
+    &.color-text, .color-text{ color: $cloud; }
+    &.color-bg, .color-bg{
+      border-color:$grey;
+      background-color: $cloud;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $grey;
+      &.color-bg, .color-bg{ border-color: darken($grey,22%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($grey,22%) !important;
+      &:focus, &.has-val{ border-color:$grey !important; }
+    }
+  }
+  &.pink{
+    border-color: $pink;
+    &.color-text, .color-text{ color: $pink; }
+    &.color-bg, .color-bg{
+      border-color:darken($pink, 10%);
+      background-color: $pink;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $pink;
+      &.color-bg, .color-bg{ border-color: darken($pink,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($pink,22%) !important;
+      &:focus, &.has-val{ border-color:$pink !important; }
+    }
+  }
+  &.purple{
+    border-color: $purple;
+    &.color-text, .color-text{ color: $purple; }
+    &.color-bg, .color-bg{
+      border-color:darken($purple, 10%);
+      background-color: $purple;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $purple;
+      &.color-bg, .color-bg{ border-color: darken($purple,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($purple,22%) !important;
+      &:focus, &.has-val{ border-color:$purple !important; }
+    }
+  }
+  &.deep-purple{
+    border-color: $deep-purple;
+    &.color-text, .color-text{ color: $deep-purple; }
+    &.color-bg, .color-bg{
+      border-color:darken($deep-purple, 10%);
+      background-color: $deep-purple;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $deep-purple;
+      &.color-bg, .color-bg{ border-color: darken($deep-purple,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($deep-purple,22%) !important;
+      &:focus, &.has-val{ border-color:$deep-purple !important; }
+    }
+  }
+  &.olive{
+    border-color: olive;
+    &.color-text, .color-text{ color: olive; }
+    &.color-bg, .color-bg{
+      border-color:darken(olive, 10%);
+      background-color: olive;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: olive;
+      &.color-bg, .color-bg{ border-color: darken(olive,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten(olive,22%) !important;
+      &:focus, &.has-val{ border-color:olive !important; }
+    }
+  }
+  &.indigo{
+    border-color: $indigo;
+    &.color-text, .color-text{ color: $indigo; }
+    &.color-bg, .color-bg{
+      border-color:darken($indigo, 10%);
+      background-color: $indigo;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $indigo;
+      &.color-bg, .color-bg{ border-color: darken($indigo,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($indigo,22%) !important;
+      &:focus, &.has-val{ border-color:$indigo !important; }
+    }
+  }
+  &.cyan{
+    border-color: $cyan;
+    &.color-text, .color-text{ color: $cyan; }
+    &.color-bg, .color-bg{
+      border-color:darken($cyan, 10%);
+      background-color: $cyan;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $cyan;
+      &.color-bg, .color-bg{ border-color: darken($cyan,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($cyan,22%) !important;
+      &:focus, &.has-val{ border-color:$cyan !important; }
+    }
+  }
+  &.teal{
+    border-color: $teal;
+    &.color-text, .color-text{ color: $teal; }
+    &.color-bg, .color-bg{
+      border-color:darken($teal, 10%);
+      background-color: $teal;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $teal;
+      &.color-bg, .color-bg{ border-color: darken($teal,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($teal,22%) !important;
+      &:focus, &.has-val{ border-color:$teal !important; }
+    }
+  }
+  &.lime{
+    border-color: $lime;
+    &.color-text, .color-text{ color: $lime; }
+    &.color-bg, .color-bg{
+      border-color:darken($lime, 10%);
+      background-color: $lime;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $lime;
+      &.color-bg, .color-bg{ border-color: darken($lime,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($lime,22%) !important;
+      &:focus, &.has-val{ border-color:$lime !important; }
+    }
+  }
+  &.carrot{
+    border-color: $carrot;
+    &.color-text, .color-text{ color: $carrot; }
+    &.color-bg, .color-bg{
+      border-color:darken($carrot, 10%);
+      background-color: $carrot;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $carrot;
+      &.color-bg, .color-bg{ border-color: darken($carrot,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($carrot,22%) !important;
+      &:focus, &.has-val{ border-color:$carrot !important; }
+    }
+  }
+  &.pumpkin{
+    border-color: $pumpkin;
+    &.color-text, .color-text{ color: $pumpkin; }
+    &.color-bg, .color-bg{
+      border-color:darken($pumpkin, 10%);
+      background-color: $pumpkin;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $pumpkin;
+      &.color-bg, .color-bg{ border-color: darken($pumpkin,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($pumpkin,22%) !important;
+      &:focus, &.has-val{ border-color:$pumpkin !important; }
+    }
+  }
+  &.coffee{
+    border-color: $coffee;
+    &.color-text, .color-text{ color: $coffee; }
+    &.color-bg, .color-bg{
+      border-color:darken($coffee, 10%);
+      background-color: $coffee;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $coffee;
+      &.color-bg, .color-bg{ border-color: darken($coffee,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($coffee,22%) !important;
+      &:focus, &.has-val{ border-color:$coffee !important; }
+    }
+  }
+  &.silver{
+    border-color: $silver;
+    &.color-text, .color-text{ color: $silver; }
+    &.color-bg, .color-bg{
+      border-color:darken($silver, 10%);
+      background-color: $silver;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $silver;
+      &.color-bg, .color-bg{ border-color: darken($silver,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($silver,22%) !important;
+      &:focus, &.has-val{ border-color:$silver !important; }
+    }
+  }
+  &.amber{
+    border-color: $amber;
+    &.color-text, .color-text{ color: $amber; }
+    &.color-bg, .color-bg{
+      border-color:darken($amber, 10%);
+      background-color: $amber;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $amber;
+      &.color-bg, .color-bg{ border-color: darken($amber,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($amber,22%) !important;
+      &:focus, &.has-val{ border-color:$amber !important; }
+    }
+  }
+  &.orange{
+    border-color: $orange;
+    &.color-text, .color-text{ color: $orange; }
+    &.color-bg, .color-bg{
+      border-color:darken($orange, 10%);
+      background-color: $orange;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $orange;
+      &.color-bg, .color-bg{ border-color: darken($orange,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($orange,22%) !important;
+      &:focus, &.has-val{ border-color:$orange !important; }
+    }
+  }
+  &.deep-orange{
+    border-color: $deep-orange;
+    &.color-text, .color-text{ color: $deep-orange; }
+    &.color-bg, .color-bg{
+      border-color:darken($deep-orange, 10%);
+      background-color: $deep-orange;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $deep-orange;
+      &.color-bg, .color-bg{ border-color: darken($deep-orange,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($deep-orange,22%) !important;
+      &:focus, &.has-val{ border-color:$deep-orange !important; }
+    }
+  }
+  &.grey, &.gray{
+    border-color: $grey;
+    &.color-text, .color-text{ color: $grey; }
+    &.color-bg, .color-bg{
+      border-color:darken($grey, 10%);
+      background-color: $grey;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $grey;
+      &.color-bg, .color-bg{ border-color: darken($grey,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($grey,22%) !important;
+      &:focus, &.has-val{ border-color:$grey !important; }
+    }
+  }
+  &.brown{
+    border-color: $brown;
+    &.color-text, .color-text{ color: $brown; }
+    &.color-bg, .color-bg{
+      border-color:darken($brown, 10%);
+      background-color: $brown;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $brown;
+      &.color-bg, .color-bg{ border-color: darken($brown,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($brown,22%) !important;
+      &:focus, &.has-val{ border-color:$brown !important; }
+    }
+  }
+  &.black{
+    border-color: black;
+    &.color-text, .color-text{ color: black; }
+    &.color-bg, .color-bg{
+      border-color:darken($grey, 20%);
+      background-color: #000;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: black;
+      &.color-bg, .color-bg{ border-color: darken($grey,10%);}
+    }
+    input, select, button, textarea{
+      border-color: $grey !important;
+      &:focus, &.has-val{ border-color:black !important; }
+    }
+  }
+  &.blue-grey, &.blue-gray{
+    border-color: $blue-grey;
+    &.color-text, .color-text{ color: $blue-grey; }
+    &.color-bg, .color-bg{
+      border-color:darken($blue-grey, 10%);
+      background-color: $blue-grey;
+      color:#fff;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $blue-grey;
+      &.color-bg, .color-bg{ border-color: darken($blue-grey,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($blue-grey,22%) !important;
+      &:focus, &.has-val{ border-color:$blue-grey !important; }
+    }
+  }
+
+  &.color-bg a, & .color-bg a{
+    color: inherit;
+    // font-weight: bold;
+    // &:hover{ color: inherit; }
+  }
+  &.color-bg a::before, .color-bg a::before{
+    font-family: "Black Tie";
+    content: "\F0B0";
+    display: inline;
+    padding: 2px;
+    font-size: 0.8em;
+  }
+  &.color-bg a.btn::before,
+  .color-bg a.btn::before,
+  &.color-bg a.button::before,
+  .color-bg a.button::before,
+  &.color-bg a.sos-btn::before,
+  .color-bg a.sos-btn::before
+  &.color-bg a.sos-button::before,
+  .color-bg a.sos-button::before
+  {
+    font-family: inherit;
+    content: "";
+  }
+
+}
+.bg-white{ background-color: #ffffff !important; color: lighten(#000, 10%); }
+.bg-grey{ background-color: $grey !important; color: white; }
+.bg-silver{ background-color: $silver !important; color: black; }
+.bg-dark-silver{ background-color: darken($silver,7%) !important; color: black; }
+.bg-asphalt{ background-color: $asphalt !important; color: #FFF; }
+.bg-blue{ background-color: $blue; color: white; }
+.bg-red{ background-color: $red; color: white; }
+.bg-asphalt{ background-color: $asphalt; color: white; }
+.autosize{	resize: vertical; }
+form, .form{
+  display: block;
+  position: relative;
+  input[type=checkbox]{
+    display: inline-block;
+    visibility: hidden;
+    & + label::before{
+      font-family: "Font Awesome 5 Free";
+    }
+    &:not(:checked) + label, &:checked + label{
+      opacity: 0.8; cursor: pointer;
+    }
+    &:not(:checked) + label::before,
+    &:checked + label::before {
+      display: inline-block;
+      position: relative;
+      font-size: 2.1em;
+      font-weight: 400;
+      bottom: -6px;
+      height: 30px; width: 30px;
+      margin: 0 5px 0 5px;
+    }
+    &.solid:not(:checked) + label::before,
+    &.solid:checked + label::before{
+      font-weight: 900;
+    }
+    &:not(:checked) + label:before{ content: "\f0c8";}
+    &:checked + label:before{ content: "\f14a";}
+  }
+  input[type=radio]{
+    display: inline-block;
+    visibility: hidden;
+    &:not(:checked) + label, &:checked + label{
+      opacity: 0.8; cursor: pointer;
+    }
+    & + label::before{
+      font-family: "Font Awesome 5 Free";
+    }
+    &:not(:checked) + label::before,
+    &:checked + label::before {
+      display: inline-block;
+      position: relative;
+      font-size: 2.1em;
+      font-weight: 400;
+      bottom: -6px;
+      height: 30px; width: 30px;
+      margin: 0 5px 0 5px;
+    }
+    &.solid:not(:checked) + label::before,
+    &.solid:checked + label::before{
+      font-weight: 900;
+    }
+
+    &:not(:checked) + label:before{ content: "\f111";}
+    &:checked + label:before{ content: "\f058";}
+  }
+  .hidden{
+    display: inline-block !important; width: 0px; height: 0px; overflow: hidden;
+  }
+}
+.border{
+  border-style: solid;
+  border-width: 1px;
+  border-color: inherit;
+  &.-bdotted{ border-style: dotted;}
+  &.-bdashed{ border-style: dashed;}
+  &.-bmedium{ border-width: 5px; }
+  &.-blarge{ border-width: 10px; }
+  &.-bxlarge{ border-width: 20px; }
+  &.-btop{
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+  }
+  &.-bright{
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+  }
+  &.-bbottom{
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+  }
+  &.-bleft{
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-top-width: 0px;
+  }
+  &.-bnone{ border: 0 !important; }
+}
+.margin{
+  margin: 5px;
+  &.-m10{  margin: 10px;  }
+  &.-m20{  margin: 20px;  }
+  &.-m30{  margin: 30px;  }
+  &.-m50{  margin: 50px;  }
+  &.-mtop{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  &.-mbottom{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  &.-mleft{
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  &.-mright{
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  &.-mnone{ margin: 0 !important; }
+}
+.padding{
+  padding: 5px;
+  &.-p10{  padding: 10px;  }
+  &.-p20{  padding: 20px;  }
+  &.-p30{  padding: 30px;  }
+  &.-p50{  padding: 50px;  }
+  &.-ptop{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  &.-pbottom{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+  &.-pleft{
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+  &.-pright{
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  &.-pnone{ padding: 0 !important; }
+}
+.font-1{ font-size: 1em !important; } .font-1-5{ font-size: 1.5em !important; } .font-2{ font-size: 2em !important; } .font-3{ font-size: 3em !important; }
+.font-0-8{ font-size: 0.8em !important; } .font-0-5{ font-size: 0.5em !important;} .font-0-6{ font-size: 0.65em !important;}
+.bold{ font-weight: bold;} .light-text{ font-weight: lighter !important;}
+.italic{ font-style: italic; }
+.color-in{ color: inherit !important;}
+.block{ display: block !important; margin-bottom: 8px; } .inline{ display:inline !important;} .in-block{ display: inline-block !important;}
+.ucase{ text-transform: capitalize;} .cap{ text-transform: uppercase;}
+.drop-shadow{ @include drop-shadow(#000); }
+.push-left{ float: left !important;}
+.push-right{ float: right !important;}
+.push-none{ float: none !important;}
+.align-r{ text-align: right !important;} // Align text to the right
+.align-c{ text-align: center !important;} // Align text centred
+.align-l{ text-align: left !important;} // Align text to the left
+.naira, .fab .fa-naira{
+  &::before{
+    content: "₦";
+  }
+}
+.border-radius-3{ @include border-radius(3px); } .border-radius-5{ @include border-radius(5px); } .border-radius-10{ @include border-radius(10px); } .border-radius-100{ @include border-radius(100%); }
+textarea.autosize{	resize: none; @include animate-height; min-height: 120px;}
+.auto-width{ width: auto !important; } .auto-height{ height: auto !important; }
+.bg-white{ background-color: white !important; }
+
+form.mat-ui, .form.mat-ui{
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  input[type="url"],
+  input[type="button"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="time"],
+  input[type="color"],
+  button,
+  textarea{
+    @include clear-input;
+    @include animate-all;
+    font-size: 1.1em;
+    border: none;
+    padding: 15px;
+    background-color: transparent;
+    width: 100%;
+    color: inherit;
+  	font-family:inherit;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    &.btn,
+    &.button,
+    &.sos-btn,
+    &.sos-button {
+      border: none;
+      padding: 17px;
+      margin: inherit;
+    }
+    &:focus, &.has-val{
+      outline: none;
+      border-bottom-width: 2px;
+      padding-bottom: 14px;
+    }
+  }
+  button, input[type=button], input[type=submit], input[type=reset]{ width: 100%; }
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-color: inherit !important;
+    -ms-appearance: none;
+    background: inherit;
+    color: inherit;
+    font-family:inherit;
+    font-size: 1.1em;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    &:focus{ outline: none;}
+    option{
+      background: $clouds;
+      padding: 0 8px 0px;
+    }
+  }
+
+  label.placeholder{
+    position: absolute;
+    display: block;
+    width: 100%;
+    padding-left: 3px;
+    font-family: $base-font;
+    top: 22px;
+    cursor: text;
+    font-size: 1.1em;
+    @include animate-all;
+    z-index: 2;
+    &.shrink{
+      font-size: 0.8em;
+      top: 0;
+    }
+  }
+}
+form.block-ui, .form.block-ui{
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  input[type="url"],
+  input[type="button"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="time"],
+  input[type="color"],
+  button,
+  textarea{
+    @include clear-input;
+    @include animate-all;
+    display: block;
+    font-size: 1.1em;
+    font-weight: lighter;
+    padding: 15px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    color: inherit;
+  	font-family:inherit;
+    border-style: solid;
+    border-width: 2px;
+    margin-top: 3px; margin-bottom: 3px;
+    &.btn,
+    &.button,
+    &.sos-btn,
+    &.sos-button {
+      border: none;
+      padding: 17px;
+      margin: inherit;
+    }
+    &:focus, &.has-val{
+      outline: none;
+    }
+  }
+  select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-color: inherit !important;
+    -ms-appearance: none;
+    background: inherit;
+    color: inherit;
+    font-family:inherit;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-style: solid;
+    border-width: 2px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    &:focus{ outline: none;}
+    option{
+      background: $clouds;
+      padding: 0 8px 0px;
+    }
+  }
+}
+
+.no-shadow{
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+.no-radius {
+  @include border-radius(0);
+}
+.view-space{
+  position: relative;
+  margin: auto;
+  max-width: 1366px;
+}
+.view-space-large{
+  position: relative;
+  margin: auto;
+  max-width: 1920px;
+}
+table{
+  width: 100%;
+  tr:nth-of-type(odd){ background: rgba(#000, 0.1); }
+  tr:hover{ background: rgba(#000, 0.2);}
+
+  &.vertical{
+    thead, tbody{  position: relative;}
+    tr, td, th{
+      padding: 10px;
+    }
+    thead tr{ background: inherit; padding: 10px; & th{ background: transparent;}}
+    tbody tr{   @include animate-bg;   }
+    td, th{
+      // border-left-style: solid;
+      // border-left-width: 1px;
+      // border-color: inherit;
+      &:first-child{ border: none;}
+    }
+  }
+  &.horizontal{
+    tr{
+      width: 100% !important;
+      margin: 0; padding: 0;
+      border-bottom: solid 1px darken($silver,5%);
+      @include animate-all;
+      &:last-child{ border: none;}
+      th{ font-weight: bold; text-align: left;}
+      th, td{
+        padding: 8px;
+      }
+    }
+  }
+}
+.theme-font{
+  font-family: $base-font;
+}

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACF,gBAAgB,EAAE,OAAqB;EACvC,KAAK,EAAE,OAAqB",
+"sources": ["../sass/theme-dark.soswapp.scss"],
+"names": [],
+"file": "web-theme-dark.css"
+}
