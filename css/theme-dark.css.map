@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAAA,IAAI;EACF,gBAAgB,EAAE,OAAqB;EACvC,KAAK,EAAE,OAAqB",
-"sources": ["../sass/theme-dark.soswapp.scss"],
-"names": [],
-"file": "web-theme-dark.css"
-}
+{"version":3,"sourceRoot":"","sources":["../sass/theme-dark.scss"],"names":[],"mappings":"AAAA;EACE;EACA","file":"theme-dark.css"}

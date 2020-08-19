@@ -828,8 +828,7 @@ input.hidden{
     // &:hover{ color: inherit; }
   }
   &.color-bg a::before, .color-bg a::before{
-    font-family: "Black Tie";
-    content: "\F0B0";
+    content: "\f0c1";
     display: inline;
     padding: 2px;
     font-size: 0.8em;
@@ -865,6 +864,7 @@ form, .form{
     visibility: hidden;
     & + label::before{
       font-family: "Font Awesome 5 Free";
+      font-weight: bold;
     }
     &:not(:checked) + label, &:checked + label{
       opacity: 0.8; cursor: pointer;
@@ -894,6 +894,7 @@ form, .form{
     }
     & + label::before{
       font-family: "Font Awesome 5 Free";
+      font-weight: bold;
     }
     &:not(:checked) + label::before,
     &:checked + label::before {
