@@ -847,6 +847,92 @@ input.hidden{
   }
 
 }
+.color-red{ color: darken($red, 20%); }
+.color-blue{ color: darken($blue, 15%); }
+.color-green{ color: darken($green, 15%); }
+.color-yellow{ color: darken($yellow, 15%); }
+.color-amber{ color: darken($amber, 15%); }
+.color-purple{ color: darken($purple, 15%); }
+@mixin -br($width, $rp : ''){
+  -webkit-border#{$rp}-radius: $width;
+  -ms-border#{$rp}-radius: $width;
+  -moz-border#{$rp}-radius: $width;
+  border#{$rp}-radius: $width;
+}
+.fw-lighter{ font-weight: lighter !important; }
+.border-radius{
+  @include -br(0);
+  &.-brall{ @include -br(3px); }
+  &.-brall.-br5{ @include -br(5px);}
+  &.-brall.-br8{ @include -br(8px);}
+  &.-brall.-br10{ @include -br(10px);}
+  &.-brall.-br12{ @include -br(12px);}
+  &.-brall.-br18{ @include -br(18px);}
+  &.-brall.-br22{ @include -br(22px);}
+  &.-brall.-br25{ @include -br(25px);}
+  &.-brall.-br32{ @include -br(32px);}
+  &.-brall.-br100{ @include -br(100%);}
+  &.-brbottom{  @include -br(3px, -bottom-left); @include -br(3px, -bottom-right);}
+  &.-brbottom.-br5{ @include -br(5px, -bottom-left); @include -br(5px, -bottom-right);}
+  &.-brbottom.-br8{ @include -br(8px, -bottom-left); @include -br(8px, -bottom-right);}
+  &.-brbottom.-br10{ @include -br(10px, -bottom-left); @include -br(10px, -bottom-right);}
+  &.-brbottom.-br12{ @include -br(12px, -bottom-left); @include -br(12px, -bottom-right);}
+  &.-brbottom.-br18{ @include -br(18px, -bottom-left); @include -br(18px, -bottom-right);}
+  &.-brbottom.-br22{ @include -br(22px, -bottom-left); @include -br(22px, -bottom-right);}
+  &.-brbottom.-br25{ @include -br(25px, -bottom-left); @include -br(25px, -bottom-right);}
+  &.-brbottom.-br32{ @include -br(32px, -bottom-left); @include -br(32px, -bottom-right);}
+  &.-brbottom.-br100{ @include -br(100%, -bottom-left); @include -br(100%, -bottom-right);}
+  &.-brtop{ @include -br(3px, -top-left); @include -br(3px, -top-right);}
+  &.-brtop.-br5{ @include -br(5px, -top-left); @include -br(5px, -top-right);}
+  &.-brtop.-br8{ @include -br(8px, -top-left); @include -br(8px, -top-right);}
+  &.-brtop.-br10{ @include -br(10px, -top-left); @include -br(10px, -top-right);}
+  &.-brtop.-br12{ @include -br(12px, -top-left); @include -br(12px, -top-right);}
+  &.-brtop.-br18{ @include -br(18px, -top-left); @include -br(18px, -top-right);}
+  &.-brtop.-br22{ @include -br(22px, -top-left); @include -br(22px, -top-right);}
+  &.-brtop.-br25{ @include -br(25px, -top-left); @include -br(25px, -top-right);}
+  &.-brtop.-br32{ @include -br(32px, -top-left); @include -br(32px, -top-right);}
+  &.-brtop.-br100{ @include -br(100%, -top-left); @include -br(100%, -top-right);}
+  &.-brtopleft{ @include -br(3px, -top-left); }
+  &.-brtopleft.-br5{ @include -br(5px, -top-left); }
+  &.-brtopleft.-br8{ @include -br(8px, -top-left);}
+  &.-brtopleft.-br10{ @include -br(10px, -top-left);}
+  &.-brtopleft.-br12{ @include -br(12px, -top-left);}
+  &.-brtopleft.-br18{ @include -br(18px, -top-left);}
+  &.-brtopleft.-br22{ @include -br(22px, -top-left);}
+  &.-brtopleft.-br25{ @include -br(25px, -top-left);}
+  &.-brtopleft.-br32{ @include -br(32px, -top-left);}
+  &.-brtopleft.-br100{ @include -br(100%, -top-left);}
+  &.-brtopright{ @include -br(3px, -top-right); }
+  &.-brtopright.-br5{ @include -br(5px, -top-right); }
+  &.-brtopright.-br8{ @include -br(8px, -top-right);}
+  &.-brtopright.-br10{ @include -br(10px, -top-right);}
+  &.-brtopright.-br12{ @include -br(12px, -top-right);}
+  &.-brtopright.-br18{ @include -br(18px, -top-right);}
+  &.-brtopright.-br22{ @include -br(22px, -top-right);}
+  &.-brtopright.-br25{ @include -br(25px, -top-right);}
+  &.-brtopright.-br32{ @include -br(32px, -top-right);}
+  &.-brtopright.-br100{ @include -br(100%, -top-right);}
+  &.-brbottomleft{ @include -br(3px, -bottom-left); }
+  &.-brbottomleft.-br5{ @include -br(5px, -bottom-left); }
+  &.-brbottomleft.-br8{ @include -br(8px, -bottom-left);}
+  &.-brbottomleft.-br10{ @include -br(10px, -bottom-left);}
+  &.-brbottomleft.-br12{ @include -br(12px, -bottom-left);}
+  &.-brbottomleft.-br18{ @include -br(18px, -bottom-left);}
+  &.-brbottomleft.-br22{ @include -br(22px, -bottom-left);}
+  &.-brbottomleft.-br25{ @include -br(25px, -bottom-left);}
+  &.-brbottomleft.-br32{ @include -br(32px, -bottom-left);}
+  &.-brbottomleft.-br100{ @include -br(100%, -bottom-left);}
+  &.-brbottomright{ @include -br(3px, -bottom-right); }
+  &.-brbottomright.-br5{ @include -br(5px, -bottom-right); }
+  &.-brbottomright.-br8{ @include -br(8px, -bottom-right);}
+  &.-brbottomright.-br10{ @include -br(10px, -bottom-right);}
+  &.-brbottomright.-br12{ @include -br(12px, -bottom-right);}
+  &.-brbottomright.-br18{ @include -br(18px, -top-right);}
+  &.-brbottomright.-br22{ @include -br(22px, -bottom-right);}
+  &.-brbottomright.-br25{ @include -br(25px, -bottom-right);}
+  &.-brbottomright.-br32{ @include -br(32px, -bottom-right);}
+  &.-brbottomright.-br100{ @include -br(100%, -bottom-right);}
+}
 .bg-white{ background-color: #ffffff !important; color: lighten(#000, 10%); }
 .bg-grey{ background-color: $grey !important; color: white; }
 .bg-silver{ background-color: $silver !important; color: black; }
