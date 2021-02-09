@@ -853,12 +853,6 @@ input.hidden{
 .color-yellow{ color: darken($yellow, 15%); }
 .color-amber{ color: darken($amber, 15%); }
 .color-purple{ color: darken($purple, 15%); }
-@mixin -br($width, $rp : ''){
-  -webkit-border#{$rp}-radius: $width;
-  -ms-border#{$rp}-radius: $width;
-  -moz-border#{$rp}-radius: $width;
-  border#{$rp}-radius: $width;
-}
 .fw-lighter{ font-weight: lighter !important; }
 .border-radius{
   @include -br(0);
@@ -1275,6 +1269,16 @@ form.block-ui, .form.block-ui{
   position: relative;
   margin: auto;
   max-width: 1920px;
+}
+.view-space-midi{
+  position: relative;
+  margin: auto;
+  max-width: 1024px;
+}
+.view-space-mini{
+  position: relative;
+  margin: auto;
+  max-width: 768px;
 }
 table{
   width: 100%;

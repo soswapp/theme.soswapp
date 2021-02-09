@@ -66,3 +66,9 @@
 	padding:0;
 	vertical-align: middle;
 }
+@mixin -br($width, $rp : ''){
+  -webkit-border#{$rp}-radius: $width;
+  -ms-border#{$rp}-radius: $width;
+  -moz-border#{$rp}-radius: $width;
+  border#{$rp}-radius: $width;
+}

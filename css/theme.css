@@ -4148,6 +4148,18 @@ form.block-ui select option, .form.block-ui select option {
   max-width: 1920px;
 }
 
+.view-space-midi {
+  position: relative;
+  margin: auto;
+  max-width: 1024px;
+}
+
+.view-space-mini {
+  position: relative;
+  margin: auto;
+  max-width: 768px;
+}
+
 table {
   width: 100%;
 }
