@@ -23,8 +23,8 @@ function shrink_ph () {
 function shrinkPlaceholder () { return shrink_ph(); }
 var btnRipple = function (e) {
     var target = e.target;
-    // if (target.tagName.toLowerCase() !== 'button') return false;
-    if ( !target.classList.contains('btn') && !target.classList.contains('ripple') ) return false;
+    if (target.tagName.toLowerCase() !== 'button' && target.tagName.toLowerCase() !== 'a' ) return false;
+    if ( (!target.classList.contains('sos-btn') && !target.classList.contains('btn')) && !target.classList.contains('ripple') ) return false;
     if ( target.classList.contains('disabled') ) return false;
     var rect = target.getBoundingClientRect();
     var ripple = target.querySelector('.ripple');
