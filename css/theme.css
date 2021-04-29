@@ -2065,6 +2065,35 @@ input.hidden {
 .color.green input:focus, .color.green input.has-val, .color.green select:focus, .color.green select.has-val, .color.green button:focus, .color.green button.has-val, .color.green textarea:focus, .color.green textarea.has-val {
   border-color: #4CAF50 !important;
 }
+.color.light-green {
+  border-color: #8BC34A;
+}
+.color.light-green.color-text, .color.light-green .color-text {
+  color: #8BC34A;
+}
+.color.light-green.color-bg, .color.light-green .color-bg {
+  border-color: #71a436;
+  background-color: #8BC34A;
+  color: #000;
+}
+.color.light-green.no-bgc, .color.light-green .no-bgc {
+  background-color: transparent;
+}
+.color.light-green div, .color.light-green p, .color.light-green h1, .color.light-green h3, .color.light-green h4, .color.light-green h5, .color.light-green h6, .color.light-green article, .color.light-green section, .color.light-green table, .color.light-green tr, .color.light-green th, .color.light-green thead, .color.light-green tbody, .color.light-green td, .color.light-green header, .color.light-green nav, .color.light-green aside, .color.light-green footer, .color.light-green ul, .color.light-green ol, .color.light-green li, .color.light-green button {
+  border-color: #8BC34A;
+}
+.color.light-green div.color-bg, .color.light-green div .color-bg, .color.light-green p.color-bg, .color.light-green p .color-bg, .color.light-green h1.color-bg, .color.light-green h1 .color-bg, .color.light-green h3.color-bg, .color.light-green h3 .color-bg, .color.light-green h4.color-bg, .color.light-green h4 .color-bg, .color.light-green h5.color-bg, .color.light-green h5 .color-bg, .color.light-green h6.color-bg, .color.light-green h6 .color-bg, .color.light-green article.color-bg, .color.light-green article .color-bg, .color.light-green section.color-bg, .color.light-green section .color-bg, .color.light-green table.color-bg, .color.light-green table .color-bg, .color.light-green tr.color-bg, .color.light-green tr .color-bg, .color.light-green th.color-bg, .color.light-green th .color-bg, .color.light-green thead.color-bg, .color.light-green thead .color-bg, .color.light-green tbody.color-bg, .color.light-green tbody .color-bg, .color.light-green td.color-bg, .color.light-green td .color-bg, .color.light-green header.color-bg, .color.light-green header .color-bg, .color.light-green nav.color-bg, .color.light-green nav .color-bg, .color.light-green aside.color-bg, .color.light-green aside .color-bg, .color.light-green footer.color-bg, .color.light-green footer .color-bg, .color.light-green ul.color-bg, .color.light-green ul .color-bg, .color.light-green ol.color-bg, .color.light-green ol .color-bg, .color.light-green li.color-bg, .color.light-green li .color-bg, .color.light-green button.color-bg, .color.light-green button .color-bg {
+  border-color: #71a436;
+}
+.color.light-green input, .color.light-green select, .color.light-green button, .color.light-green textarea {
+  border-color: #c1df9e !important;
+}
+.color.light-green input:focus, .color.light-green input.has-val, .color.light-green select:focus, .color.light-green select.has-val, .color.light-green button:focus, .color.light-green button.has-val, .color.light-green textarea:focus, .color.light-green textarea.has-val {
+  border-color: #8BC34A !important;
+}
+.color.light-green button {
+  color: #000;
+}
 .color.green-sea {
   border-color: #16a085;
 }
@@ -2248,14 +2277,14 @@ input.hidden {
   border-color: #673AB7 !important;
 }
 .color.olive {
-  border-color: olive;
+  border-color: #808000;
 }
 .color.olive.color-text, .color.olive .color-text {
-  color: olive;
+  color: #808000;
 }
 .color.olive.color-bg, .color.olive .color-bg {
   border-color: #4d4d00;
-  background-color: olive;
+  background-color: #808000;
   color: #fff;
 }
 .color.olive.no-bgc, .color.olive .no-bgc {

@@ -407,6 +407,25 @@ input.hidden{
       &:focus, &.has-val{ border-color:$green !important; }
     }
   }
+  &.light-green{
+    border-color: $light-green;
+    &.color-text, .color-text{ color: $light-green; }
+    &.color-bg, .color-bg{
+      border-color:darken($light-green, 10%);
+      background-color: $light-green;
+      color:#000;
+    }
+    &.no-bgc, .no-bgc{ background-color: transparent;}
+    div, p, h1, h3, h4, h5, h6, article, section, table, tr, th, thead, tbody, td, header, nav, aside, footer, ul, ol, li, button{
+      border-color: $light-green;
+      &.color-bg, .color-bg{ border-color: darken($light-green,10%);}
+    }
+    input, select, button, textarea{
+      border-color: lighten($light-green,22%) !important;
+      &:focus, &.has-val{ border-color:$light-green !important; }
+    }
+    button{ color: #000; }
+  }
   &.green-sea{
     border-color: $green-sea;
     &.color-text, .color-text{ color: $green-sea; }
@@ -534,11 +553,11 @@ input.hidden{
     }
   }
   &.olive{
-    border-color: olive;
-    &.color-text, .color-text{ color: olive; }
+    border-color: $olive;
+    &.color-text, .color-text{ color: $olive; }
     &.color-bg, .color-bg{
-      border-color:darken(olive, 10%);
-      background-color: olive;
+      border-color:darken($olive, 10%);
+      background-color: $olive;
       color:#fff;
     }
     &.no-bgc, .no-bgc{ background-color: transparent;}
