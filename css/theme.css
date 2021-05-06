@@ -3566,15 +3566,15 @@ form .hidden, .form .hidden {
   float: none !important;
 }
 
-.align-r {
+.align-r, .align-right {
   text-align: right !important;
 }
 
-.align-c {
+.align-c, .align-center, .align-centre {
   text-align: center !important;
 }
 
-.align-l {
+.align-l, .align-left {
   text-align: left !important;
 }
 
@@ -4245,6 +4245,259 @@ table.horizontal tr th, table.horizontal tr td {
 
 .theme-font {
   font-family: "Open Sans";
+}
+
+.bordr.-ball {
+  border-width: thin;
+  border-style: solid;
+}
+.bordr.-ball.-bmedium {
+  border-width: medium;
+}
+.bordr.-ball.-bthick {
+  border-width: thick;
+}
+.bordr.-ball.-bdotted {
+  border-style: dotted;
+}
+.bordr.-ball.-bdashed {
+  border-style: dashed;
+}
+
+.bordr.-btop {
+  border-top-width: thin;
+  border-top-style: solid;
+}
+.bordr.-btop.-bmedium {
+  border-top-width: medium;
+}
+.bordr.-btop.-bthick {
+  border-top-width: thick;
+}
+.bordr.-btop.-bdotted {
+  border-top-style: dotted;
+}
+.bordr.-btop.-bdashed {
+  border-top-style: dashed;
+}
+
+.bordr.-bbottom {
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+}
+.bordr.-bbottom.-bmedium {
+  border-bottom-width: medium;
+}
+.bordr.-bbottom.-bthick {
+  border-bottom-width: thick;
+}
+.bordr.-bbottom.-bdotted {
+  border-bottom-style: dotted;
+}
+.bordr.-bbottom.-bdashed {
+  border-bottom-style: dashed;
+}
+
+.bordr.-bleft {
+  border-left-width: thin;
+  border-left-style: solid;
+}
+.bordr.-bleft.-bmedium {
+  border-left-width: medium;
+}
+.bordr.-bleft.-bthick {
+  border-left-width: thick;
+}
+.bordr.-bleft.-bdotted {
+  border-left-style: dotted;
+}
+.bordr.-bleft.-bdashed {
+  border-left-style: dashed;
+}
+
+.bordr.-bright {
+  border-right-width: thin;
+  border-right-style: solid;
+}
+.bordr.-bright.-bmedium {
+  border-right-width: medium;
+}
+.bordr.-bright.-bthick {
+  border-right-width: thick;
+}
+.bordr.-bright.-bdotted {
+  border-right-style: dotted;
+}
+.bordr.-bright.-bdashed {
+  border-right-style: dashed;
+}
+
+.clear-margin {
+  margin: 0;
+}
+
+.margn.-mall {
+  margin: 5px;
+}
+.margn.-mall.-m10 {
+  margin: 10px;
+}
+.margn.-mall.-m20 {
+  margin: 20px;
+}
+.margn.-mall.-m30 {
+  margin: 30px;
+}
+.margn.-mall.-m50 {
+  margin: 50px;
+}
+
+.margn.-mtop {
+  margin-top: 5px;
+}
+.margn.-mtop.-m10 {
+  margin-top: 10px;
+}
+.margn.-mtop.-m20 {
+  margin-top: 20px;
+}
+.margn.-mtop.-m30 {
+  margin-top: 30px;
+}
+.margn.-mtop.-m50 {
+  margin-top: 50px;
+}
+
+.margn.-mbottom {
+  margin-bottom: 5px;
+}
+.margn.-mbottom.-m10 {
+  margin-bottom: 10px;
+}
+.margn.-mbottom.-m20 {
+  margin-bottom: 20px;
+}
+.margn.-mbottom.-m30 {
+  margin-bottom: 30px;
+}
+.margn.-mbottom.-m50 {
+  margin-bottom: 50px;
+}
+
+.margn.-mleft {
+  margin-left: 5px;
+}
+.margn.-mleft.-m10 {
+  margin-left: 10px;
+}
+.margn.-mleft.-m20 {
+  margin-left: 20px;
+}
+.margn.-mleft.-m30 {
+  margin-left: 30px;
+}
+.margn.-mleft.-m50 {
+  margin-left: 50px;
+}
+
+.margn.-mright {
+  margin-left: 5px;
+}
+.margn.-mright.-m10 {
+  margin-right: 10px;
+}
+.margn.-mright.-m20 {
+  margin-right: 20px;
+}
+.margn.-mright.-m30 {
+  margin-right: 30px;
+}
+.margn.-mright.-m50 {
+  margin-right: 50px;
+}
+
+.clear-padding {
+  padding: 0;
+}
+
+.paddn.-pall {
+  padding: 5px;
+}
+.paddn.-pall.-p10 {
+  padding: 10px;
+}
+.paddn.-pall.-p20 {
+  padding: 20px;
+}
+.paddn.-pall.-p30 {
+  padding: 30px;
+}
+.paddn.-pall.-p50 {
+  padding: 50px;
+}
+
+.paddn.-ptop {
+  padding: 5px;
+}
+.paddn.-ptop.-p10 {
+  padding-top: 10px;
+}
+.paddn.-ptop.-p20 {
+  padding-top: 20px;
+}
+.paddn.-ptop.-p30 {
+  padding-top: 30px;
+}
+.paddn.-ptop.-p50 {
+  padding-top: 50px;
+}
+
+.paddn.-pbottom {
+  padding: 5px;
+}
+.paddn.-pbottom.-p10 {
+  padding-bottom: 10px;
+}
+.paddn.-pbottom.-p20 {
+  padding-bottom: 20px;
+}
+.paddn.-pbottom.-p30 {
+  padding-bottom: 30px;
+}
+.paddn.-pbottom.-p50 {
+  padding-bottom: 50px;
+}
+
+.paddn.-pleft {
+  padding: 5px;
+}
+.paddn.-pleft.-p10 {
+  padding-left: 10px;
+}
+.paddn.-pleft.-p20 {
+  padding-left: 20px;
+}
+.paddn.-pleft.-p30 {
+  padding-left: 30px;
+}
+.paddn.-pleft.-p50 {
+  padding-left: 50px;
+}
+
+.paddn.-pright {
+  padding: 5px;
+}
+.paddn.-pright.-p10 {
+  padding-right: 10px;
+}
+.paddn.-pright.-p20 {
+  padding-right: 20px;
+}
+.paddn.-pright.-p30 {
+  padding-right: 30px;
+}
+.paddn.-pright.-p50 {
+  padding-right: 50px;
 }
 
 /*# sourceMappingURL=theme.css.map */

@@ -946,6 +946,7 @@ input.hidden{
   &.-brbottomright.-br32{ @include -br(32px, -bottom-right);}
   &.-brbottomright.-br100{ @include -br(100%, -bottom-right);}
 }
+
 .bg-white{ background-color: #ffffff !important; color: lighten(#000, 10%); }
 .bg-grey{ background-color: $grey !important; color: white; }
 .bg-silver{ background-color: $silver !important; color: black; }
@@ -1017,6 +1018,7 @@ form, .form{
     display: inline-block !important; width: 0px; height: 0px; overflow: hidden;
   }
 }
+
 .border{
   border-style: solid;
   border-width: 1px;
@@ -1048,6 +1050,7 @@ form, .form{
   }
   &.-bnone{ border: 0 !important; }
 }
+
 .margin{
   margin: 5px;
   &.-m10{  margin: 10px;  }
@@ -1076,6 +1079,7 @@ form, .form{
   }
   &.-mnone{ margin: 0 !important; }
 }
+
 .padding{
   padding: 5px;
   &.-p10{  padding: 10px;  }
@@ -1115,9 +1119,9 @@ form, .form{
 .push-left{ float: left !important;}
 .push-right{ float: right !important;}
 .push-none{ float: none !important;}
-.align-r{ text-align: right !important;} // Align text to the right
-.align-c{ text-align: center !important;} // Align text centred
-.align-l{ text-align: left !important;} // Align text to the left
+.align-r, .align-right{ text-align: right !important;} // Align text to the right
+.align-c, .align-center, .align-centre{ text-align: center !important;} // Align text centred
+.align-l, .align-left{ text-align: left !important;} // Align text to the left
 .naira, .fab .fa-naira{
   &::before{
     content: "₦";
@@ -1334,4 +1338,120 @@ table{
 }
 .theme-font{
   font-family: $base-font;
+}
+
+// improved style
+.bordr.-ball{
+  border-width: thin;
+  border-style: solid;
+  &.-bmedium{ border-width: medium; }
+  &.-bthick{ border-width: thick; }
+  &.-bdotted{ border-style: dotted; }
+  &.-bdashed{ border-style: dashed; }
+}
+.bordr.-btop{
+  border-top-width: thin;
+  border-top-style: solid;
+  &.-bmedium{ border-top-width: medium; }
+  &.-bthick{ border-top-width: thick; }
+  &.-bdotted{ border-top-style: dotted; }
+  &.-bdashed{ border-top-style: dashed; }
+}
+.bordr.-bbottom{
+  border-bottom-width: thin;
+  border-bottom-style: solid;
+  &.-bmedium{ border-bottom-width: medium; }
+  &.-bthick{ border-bottom-width: thick; }
+  &.-bdotted{ border-bottom-style: dotted; }
+  &.-bdashed{ border-bottom-style: dashed; }
+}
+.bordr.-bleft{
+  border-left-width: thin;
+  border-left-style: solid;
+  &.-bmedium{ border-left-width: medium; }
+  &.-bthick{ border-left-width: thick; }
+  &.-bdotted{ border-left-style: dotted; }
+  &.-bdashed{ border-left-style: dashed; }
+}
+.bordr.-bright{
+  border-right-width: thin;
+  border-right-style: solid;
+  &.-bmedium{ border-right-width: medium; }
+  &.-bthick{ border-right-width: thick; }
+  &.-bdotted{ border-right-style: dotted; }
+  &.-bdashed{ border-right-style: dashed; }
+}
+
+.clear-margin { margin: 0; }
+.margn.-mall{
+  margin: 5px;
+  &.-m10{  margin: 10px;  }
+  &.-m20{  margin: 20px;  }
+  &.-m30{  margin: 30px;  }
+  &.-m50{  margin: 50px;  }
+}
+.margn.-mtop{
+  margin-top: 5px;
+  &.-m10{  margin-top: 10px;  }
+  &.-m20{  margin-top: 20px;  }
+  &.-m30{  margin-top: 30px;  }
+  &.-m50{  margin-top: 50px;  }
+}
+.margn.-mbottom{
+  margin-bottom: 5px;
+  &.-m10{  margin-bottom: 10px;  }
+  &.-m20{  margin-bottom: 20px;  }
+  &.-m30{  margin-bottom: 30px;  }
+  &.-m50{  margin-bottom: 50px;  }
+}
+.margn.-mleft{
+  margin-left: 5px;
+  &.-m10{  margin-left: 10px;  }
+  &.-m20{  margin-left: 20px;  }
+  &.-m30{  margin-left: 30px;  }
+  &.-m50{  margin-left: 50px;  }
+}
+.margn.-mright{
+  margin-left: 5px;
+  &.-m10{  margin-right: 10px;  }
+  &.-m20{  margin-right: 20px;  }
+  &.-m30{  margin-right: 30px;  }
+  &.-m50{  margin-right: 50px;  }
+}
+
+.clear-padding{ padding: 0; }
+.paddn.-pall{
+  padding: 5px;
+  &.-p10{  padding: 10px;  }
+  &.-p20{  padding: 20px;  }
+  &.-p30{  padding: 30px;  }
+  &.-p50{  padding: 50px;  }
+}
+.paddn.-ptop{
+  padding: 5px;
+  &.-p10{  padding-top: 10px;  }
+  &.-p20{  padding-top: 20px;  }
+  &.-p30{  padding-top: 30px;  }
+  &.-p50{  padding-top: 50px;  }
+}
+.paddn.-pbottom{
+  padding: 5px;
+  &.-p10{  padding-bottom: 10px;  }
+  &.-p20{  padding-bottom: 20px;  }
+  &.-p30{  padding-bottom: 30px;  }
+  &.-p50{  padding-bottom: 50px;  }
+}
+.paddn.-pleft{
+  padding: 5px;
+  &.-p10{  padding-left: 10px;  }
+  &.-p20{  padding-left: 20px;  }
+  &.-p30{  padding-left: 30px;  }
+  &.-p50{  padding-left: 50px;  }
+}
+.paddn.-pright{
+  padding: 5px;
+  &.-p10{  padding-right: 10px;  }
+  &.-p20{  padding-right: 20px;  }
+  &.-p30{  padding-right: 30px;  }
+  &.-p50{  padding-right: 50px;  }
 }
