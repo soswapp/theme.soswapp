@@ -44,8 +44,8 @@ var btnRipple = function (e) {
 }
 document.addEventListener('click', btnRipple, false);
 sos.setup = function () {
-  $("[id^='setup-']").each(function(){
-    var name = $(this).attr('id').replace('setup-','');
+  $("[data-setup]").each(function(){
+    var name = $(this).data('setup');
     if(typeof sos.config[name] !== 'object') sos.config[name] = {}
     $.each($(this).data(),function(key,val){
       sos.config[name][key] = val;
